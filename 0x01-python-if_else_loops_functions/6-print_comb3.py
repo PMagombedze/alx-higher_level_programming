@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 for a in (
-    list(range(10))
+    list(range(1, 10))
     + list(range(12, 20))
     + list(range(23, 30))
     + list(range(34, 40))
