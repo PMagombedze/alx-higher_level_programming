@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 def fizzbuzz():
     """fizz buzz fizzbuzz"""
     for n in range(1, 101):
