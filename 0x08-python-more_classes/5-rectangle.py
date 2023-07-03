@@ -23,6 +23,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -55,3 +56,11 @@ class Rectangle:
             strn = strn + "\n".join("#" * self.__width
                                     for n in range(self.__height))
         return strn
+
+    def __repr__(self):
+        """return string rep of rectangle"""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """print bye rectangle if instance of rect is deleted"""
+        print("Bye rectangle...")
