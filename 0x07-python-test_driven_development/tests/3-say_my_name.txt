@@ -1,0 +1,39 @@
+The ``3-say_my_name`` mdoule
+============================
+
+Using ``say_my_name``
+---------------------
+
+Importing function:
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+check for module docstring:
+    >>> d = __import__("3-say_my_name").__doc__
+    >>> len(d) > 1
+    True
+
+Check for one argument:
+    >>> say_my_name("name")
+    My name is name
+
+Check for more than 2 args:
+    >>> say_my_name("name", "name2", "nam3")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Check for 2 arguments(normal):
+    >>> say_my_name("nam1" ,"nam2")
+    My name is nam1 nam2
+
+Check for wrong type(first_name):
+    >>> say_my_name(9 ,"nam")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Check for wrong type(last_name):
+    >>> say_my_name("nam", 8)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
