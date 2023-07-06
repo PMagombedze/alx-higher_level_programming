@@ -1,0 +1,30 @@
+The ``2-matrix_divided`` module
+===============================
+
+Using ``matrix_divided``
+-------------------------
+
+This is a text file in reStructredText format. First import
+``matrix_divided`` from ``2-matrix_divided`` module
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Check module docstring:
+    >>> d = __import__("2-matrix_divided").__doc__
+    >>> len(d) > 1
+    True
+
+Check for uneven matrix:
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> matrix_divided(matrix, 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+Check for matrix as list:
+    >>> matrix = "matrix"
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    
