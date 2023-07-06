@@ -1,0 +1,24 @@
+The ``0-add_integer`` module
+============================
+
+Using ``add_integer``
+---------------------
+
+This is a a text file in reStructuredText format. First import
+``add_integer`` from ``0-add_integer`` module
+
+   >>> from 0-add_integer import add_integer
+
+Now using function:
+    >>> add_integer(2, 4)
+    6
+
+Checking negative values:
+    >>> add_integer(4, -10)
+    -6
+
+Checking wrong data type:
+    >>> add_integer(4, G)
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
