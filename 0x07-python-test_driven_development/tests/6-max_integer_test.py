@@ -1,13 +1,11 @@
 #!/usr/bin/python3
-"""
-Unittest for max_integer([..])
+"""Unittest for max_integer([..])
 """
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-
-class MaxIntegerTest(unittest.TestCase):
-    """unittest class for max_integer"""
+class TestMaxInteger(unittest.TestCase):
+"""unittest class for max_integer"""
     def moduleTest(self):
         """check module docsting"""
         d = __import__('6-max_integer').__doc__
