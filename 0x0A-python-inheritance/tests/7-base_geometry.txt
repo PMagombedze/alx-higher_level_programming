@@ -16,7 +16,19 @@ Check for integer validator:
       >>> e.integer_validator("name", "2")
       Traceback (most recent call last):
       ...
-      TypeError: "2" must be an integer
+      TypeError: value must be an integer
+      >>> e.integer_validator("price", None)
+      Traceback (most recent call last)
+      ...
+      TypeError: value must be an integer
+      >>> e.integer_validator("name2", -4)
+      Traceback (most recent call last)
+      ...
+      ValueError: value must be greater than 0
+      >>> e.integer_validator("name3")
+      Traceback (most recent call last)
+      ...
+      TypeError: integer_validator() missing 2 required positional values
 
 
       
