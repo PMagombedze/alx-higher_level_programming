@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 kind of class
 """
