@@ -1,0 +1,22 @@
+The ``7-base_geometry`` module
+========================
+
+Check for module docstring:
+      >>> d = __import__('7-base_geometry').__doc__
+      >>> len(d) > 1
+      True
+
+Check for class docstring:
+      >>> c = __import__('7-base_geometry').BaseGeometry.__doc__
+      >>> len(c) > 1
+      True
+
+Check for integer validator:
+      >>> e = BaseGeometry()
+      >>> e.integer_validator("name", "2")
+      Traceback (most recent call last):
+      ...
+      TypeError: "2" must be an integer
+
+
+      
