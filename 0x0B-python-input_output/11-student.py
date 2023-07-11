@@ -14,7 +14,12 @@ class Student:
 
     def to_json(self, attrs=None):
         """dictionary repr"""
-        if (type(attrs) == list:
+        if (type(attrs) == list):
             if  all(type(item) == str for item in attrs):
                 return {n: getattr(self, n) for n in attrs if hasattr(self, n)}
         return self.__dict__
+
+    def reload_from_json(self, json):
+        """replace attrs"""
+        for i, j in json.items():
+            setattr(self, i, j)
